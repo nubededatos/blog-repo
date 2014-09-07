@@ -11,3 +11,5 @@ B=data.frame(X,Y)
 reg=glm(Y~bs(X),data=B)
 y=predict(reg,newdata=data.frame(X=seq(0,10,by=.1)))
 lines(seq(0,10,by=.1),y,col="red")
+
+cua
