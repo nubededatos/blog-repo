@@ -1,0 +1,54 @@
+Title
+========================================================
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
+
+When you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r echo=TRUE, results='markup'}
+datos <- read.csv("datos.txt", sep=";") # Fichero en el directorio
+hist(datos$año) # Intentamos crear histograma
+names(datos) # Genera error por la ñ en Año
+colnames(datos) <- c("id","nombre","fecha") # Renombramos las columnas
+names(datos)
+# Creamos histograma por defecto
+hist(datos$fecha) # Usamos el nuevo nombre: fechas
+```
+
+
+```{r }
+# Tabla de frecuencias
+# http://www.r-bloggers.com/r-function-of-the-day-cut-2/
+# http://www.r-tutor.com/elementary-statistics/quantitative-data/relative-frequency-distribution-quantitative-data
+intervalos <- seq(from = 1913, to = 2013, by = 10) 
+frecuencias <- cut(datos$fecha, 
+                 breaks = intervalos,   
+                 dig.lab = 4,   # Nº de dígitos de los intervalos
+                 right = FALSE) # Intervalos [a, b). Por defecto: (a, b]
+tabla.frec  <- table(frecuencias)   # Crea la tabla de frecuncias
+as.data.frame(tabla.frec) # O cbind(tabla.frec) mejoramos el formato
+#http://ww2.coastal.edu/kingw/statistics/R-tutorials/descriptive.html
+```
+
+
+```{r }
+#Formateamos el histograma
+intervalos <- seq(from = 1913, to = 2013, by = 10) 
+h <- hist(datos$fecha, 
+          breaks = intervalos,  # Añadimos los intervalos
+          freq = TRUE, # Representa frecuencias
+          right = FALSE, # Intervalos [a, b). Por defecto: (a, b]
+          col = rgb(79, 129, 189, max = 255), # Color de las columnas
+          border = "white",     # Color del borde
+          labels = TRUE,        # Etiquetas de las columnas
+          main = "Frecuencias", # Título del gráfico
+          xaxt = "n",           # Eliminamos eje x
+          yaxt = "n",           # Eliminamos eje y
+          xlab = "Años",        # Título del eje x
+          ylab = NULL,          # Título del eje y
+          ylim = c(0, 20))      # Escala de y (fijamos max en 20)
+axis(side = 1, at = intervalos)  # Etiquetas del eje x 
+```
+
+  
+

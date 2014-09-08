@@ -1,0 +1,9 @@
+var1;var2;weight
+A;B;2
+B;C;1
+C;D;2
+D;A;2
+A;E;5
+B;E;1
+C;E;7
+D;E;1

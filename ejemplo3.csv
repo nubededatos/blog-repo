@@ -1,0 +1,11 @@
+var1;var2;weight
+Origen;A;40
+Origen;B;60
+Origen;C;60
+A;B;10
+A;D;70
+B;D;55
+B;C;20
+C;E;10
+D;Destino;60
+E;Destino;80
