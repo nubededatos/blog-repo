@@ -1,4 +1,4 @@
-git basic commands
+git basic commands - Benjamin
 
 pwd diplays the path to the current working directory
 
@@ -7,7 +7,6 @@ ls -a lists hidden and unhidden files and folders
 ls -al lists details for hidden and unhidden files and folders
 
 preceded by -  <- flagged
-
 
 http://stackoverflow.com/questions/19742256/path-doesnt-work-with-20-for-space-in-filename-in-git-console
 we can also use tab completion in case you have only one file with name starting with that string 

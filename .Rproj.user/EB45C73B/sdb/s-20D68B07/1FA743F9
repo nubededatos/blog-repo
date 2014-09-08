@@ -1,0 +1,16 @@
+{
+    "contents" : "# http://freakonometrics.hypotheses.org/16010\nbase=read.table(\"http://freakonometrics.free.fr/cafe.csv\", header=TRUE,sep=\";\",dec=\",\")\nb=base[!is.na(base$GDP.PPP),]\nplot(b[,3],b[,4],xlab=\"Coffee Consumption\", ylab=\"GDP per hour worked\")\ntext(b[,3],b[,4]+1.6,b[,1],cex=.6)\ninstall.packages(\"splines\")\nlibrary(splines)\nX=b[,3]\nY=b[,4]\nB=data.frame(X,Y)\nreg=glm(Y~bs(X),data=B)\ny=predict(reg,newdata=data.frame(X=seq(0,10,by=.1)))\nlines(seq(0,10,by=.1),y,col=\"red\")\n\ncua\n",
+    "created" : 1410120711498.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4263800905",
+    "id" : "1FA743F9",
+    "lastKnownWriteTime" : 1410120992,
+    "path" : "~/R/blog-repo/COFFEE AND PRODUCTIVITY",
+    "project_path" : "COFFEE AND PRODUCTIVITY",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "text"
+}

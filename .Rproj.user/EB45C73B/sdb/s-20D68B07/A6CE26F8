@@ -1,0 +1,17 @@
+{
+    "contents" : "git basic commands\n\npwd diplays the path to the current working directory\n\nls list files and folders in the current directory\nls -a lists hidden and unhidden files and folders\nls -al lists details for hidden and unhidden files and folders\n\npreceded by -  <- flagged\n\n\nhttp://stackoverflow.com/questions/19742256/path-doesnt-work-with-20-for-space-in-filename-in-git-console\nwe can also use tab completion in case you have only one file with name starting with that string \n\ncd change directory\ncd with no arguments takes you to your home directory\ncd .. allows you to change directory to one level above your current directory\ncd - get back\n\nmkdir makes directory\ntouch creates empty file\ncp stands for copy. takes as its first argument a file, and as its second argument the path to where you want the file to be copied\nrm remove\nrm to delete entire directories and their contents by using the -r flag\nrm -r Mydocumentes \n\nmv stands for move\n\necho will print whatever arguments you provide\n\ndate will print today's data",
+    "created" : 1410187923404.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1135777575",
+    "id" : "A6CE26F8",
+    "lastKnownWriteTime" : 1410190950,
+    "path" : "~/R/blog-repo/git basic commands",
+    "project_path" : "git basic commands",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "text"
+}
